@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>省份城市级联</title>
+        <script type="text/javascript" src="assets/js/f.g.js"></script>
+        <script type="text/javascript" src="assets/js/province_city.js"></script>
+    </head>
+
+    <body>
+        <select id="province" name="province" onchange="PROVINCE_CITY.select_change(this.value, 'city')">
+            <option value="0">请选择</option>
+        </select>
+        <select id="city" name="city" onchange="PROVINCE_CITY.select_change(this.value, 'area')">
+            <option value="0">请选择</option>
+        </select>
+        <select id="area" name="area">
+            <option value="0">请选择</option>
+        </select>
+        <script type="text/javascript">
+            /**初始化省份 start**/
+            var _province_option = '<option value="0">请选择</option>';
+            for(var i in PROVINCE_CITY.area[0]){
+                _province_option += '<option value="'+i+'">'+PROVINCE_CITY.area[0][i]+'</option>';
+            }
+            FUN_G.get_obj('province').innerHTML = _province_option;
+            /**初始化省份 end**/
+        </script>
+    </body>
+</html>
