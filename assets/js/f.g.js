@@ -3,24 +3,24 @@
  * @description: function.global
  * @file: f.g.js
  * @charset: UTF-8
- * @create: 2014-10-14
+ * @create: 2014-12-20
  * @version 1.0
 **/
 
 if(typeof(FUN_G) == 'undefined'){
 var FUN_G = {
-    'name'      : 'FUNCTION_GLOBAL',
-    'version'   : '1.0',
-    'get_obj' : function(_id){
+    'name'    : 'FUNCTION_GLOBAL',
+    'version' : '1.0',
+    'get_id'  : function(_id){
         return document.getElementById(_id);
     },
-    'ltrim' : function(_str){
+    'ltrim'   : function(_str){
         return _str.replace(/^[\s]+/, '');
     },
-    'rtrim' : function(_str){
+    'rtrim'   : function(_str){
         return _str.replace(/[\s]+$/, '');
     },
-    'trim' : function(_str){
+    'trim'    : function(_str){
         return this.rtrim(this.ltrim(_str));
     },
     'check_data' : function(_str, _type){
@@ -30,7 +30,7 @@ var FUN_G = {
             case 'username'     : {var _reg = /^[A-Za-z]+[\w\-]*[A-Za-z0-9\-]+$/; _return = _reg.test(_str); break;}
             case 'http'         : {var _reg = /^http:\/\/[A-Za-z0-9-]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"])*$/; _return = _reg.test(_str); break;}
             case 'qq'           : {var _reg = /^[1-9]\d{4,11}$/; _return = _reg.test(_str); break;}
-            case 'port'         : {var _reg = /^[1-9]\d{5}$/; _return = _reg.test(_str); break;}
+            case 'post'         : {var _reg = /^[1-9]\d{5}$/; _return = _reg.test(_str); break;}
             case 'idnum'        : {var _reg = /^\d{15}(\d{2}[A-Za-z0-9])?$/; _return = _reg.test(_str); break;}
             case 'english'      : {var _reg = /^[A-Za-z]+$/; _return = _reg.test(_str); break;}
             case 'mobile'       : {var _reg = /^((\(\d{3}\))|(\d{3}\-))?((13)|(14)|(15)|(17)|(18)){1}\d{9}$/; _return = _reg.test(_str); break;}
@@ -46,11 +46,11 @@ var FUN_G = {
             case 'time'         : {var _reg = /^[\d]{1,2}:[\d]{1,2}:[\d]{1,2}$/; _return = _reg.test(_str); break;}
             case 'times'        : {var _reg = /^[\d]{2}:[\d]{2}:[\d]{2}$/; _return = _reg.test(_str); break;}
             case 'ip'           : {var _reg = /^\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b$/; _return = _reg.test(_str); break;}
-            case 'incchinese'   : {var _reg = /[\u4e00-\u9fa5]+/; _return = _reg.test(_str); break;} //æ˜¯å¦åŒ…å«ä¸­æ–‡
-            case 'plusnum'      : {var _reg = /^[1-9]*[1-9][0-9]*$/; _return = _reg.test(_str); break;} //æ˜¯å¦æ˜¯æ­£æ•´æ•°
-            case 'hostrecord'   : {var _reg = /^[A-Z_a-z0-9][A-Za-z0-9-]+(\.[A-Za-z0-9-_]+)*$/; _return = _reg.test(_str); break;} //æ­£ç¡®çš„ä¸»æœºè®°å½•,english
-            case 'cnhostrecord' : {var _reg = /^[_a-zA-Z0-9]*([\u4e00-\u9fa5]*[-a-zA-Z0-9\.]*)+[a-zA-Z0-9_]$/i; _return = _reg.test(_str); break;} //æ­£ç¡®çš„ä¸»æœºè®°å½•,english chinese
-            case 'domain'       : {var _reg = /^[A-Za-z0-9][A-Za-z0-9-]+(\.[A-Za-z0-9-]+){1,3}$/; _return = _reg.test(_str); break;} //æ˜¯å¦æ˜¯åŸŸå
+            case 'incchinese'   : {var _reg = /[\u4e00-\u9fa5]+/; _return = _reg.test(_str); break;} //ÊÇ·ñ°üº¬ÖĞÎÄ
+            case 'plusnum'      : {var _reg = /^[1-9]*[1-9][0-9]*$/; _return = _reg.test(_str); break;} //ÊÇ·ñÊÇÕıÕûÊı
+            case 'hostrecord'   : {var _reg = /^[A-Z_a-z0-9][A-Za-z0-9-]+(\.[A-Za-z0-9-_]+)*$/; _return = _reg.test(_str); break;} //ÕıÈ·µÄÖ÷»ú¼ÇÂ¼,english
+            case 'cnhostrecord' : {var _reg = /^[_a-zA-Z0-9]*([\u4e00-\u9fa5]*[-a-zA-Z0-9\.]*)+[a-zA-Z0-9_]$/i; _return = _reg.test(_str); break;} //ÕıÈ·µÄÖ÷»ú¼ÇÂ¼,english chinese
+            case 'domain'       : {var _reg = /^[A-Za-z0-9][A-Za-z0-9-]+(\.[A-Za-z0-9-]+){1,3}$/; _return = _reg.test(_str); break;} //ÊÇ·ñÊÇÓòÃû
             case 'mac'          : {var _reg = /^[a-fA-F\d]{2}:[a-fA-F\d]{2}:[a-fA-F\d]{2}:[a-fA-F\d]{2}:[a-fA-F\d]{2}:[a-fA-F\d]{2}$/; _return = _reg.test(_str); break;}
             case 'ipv6'         : {var _reg = /^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/; _return = _reg.test(_str); break;}
         
