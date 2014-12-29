@@ -4431,8 +4431,8 @@ var PROVINCE_CITY = {
         }
     },
     select_change : function(_id, _type){
+        var _option = '<option value="0">请选择</option>';
         if(_id > 0){
-            var _option = '<option value="0">请选择</option>';
             if(_id.substr(_id.indexOf('0')) == '0000'){
                 FUN_G.get_id('area').innerHTML = _option;
             }
@@ -4440,6 +4440,9 @@ var PROVINCE_CITY = {
                 _option += '<option value="'+i+'">'+this.area[_id][i]+'</option>';
             }
             FUN_G.get_id(_type).innerHTML = _option;
+        }else{
+            FUN_G.get_id(_type).innerHTML = _option;
+            FUN_G.get_id('area').innerHTML = _option;
         }
     },
 }
