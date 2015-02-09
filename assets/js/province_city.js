@@ -4431,18 +4431,26 @@ var PROVINCE_CITY = {
         }
     },
     select_change : function(_id, _type){
-        var _option = '<option value="0">请选择</option>';
+        var _option = '';
+        if(_type == 'city'){
+            FUN_G.get_id(_type).length = 0;
+            var _city_option = document.createElement("option");
+            _city_option.value = 0;
+            _city_option.innerHTML = '请选择'; 
+            FUN_G.get_id(_type).appendChild(_city_option);
+        }
+        FUN_G.get_id('area').length = 0;
+        var _area_option = document.createElement("option");
+        _area_option.value = 0;
+        _area_option.innerHTML = '请选择'; 
+        FUN_G.get_id('area').appendChild(_area_option);
         if(_id > 0){
-            if(_id.substr(_id.indexOf('0')) == '0000'){
-                FUN_G.get_id('area').innerHTML = _option;
-            }
             for(var i in this.area[_id]){
-                _option += '<option value="'+i+'">'+this.area[_id][i]+'</option>';
+                var _select_option = document.createElement("option");
+                _select_option.value = i;
+                _select_option.innerHTML = this.area[_id][i]; 
+                FUN_G.get_id(_type).appendChild(_select_option);
             }
-            FUN_G.get_id(_type).innerHTML = _option;
-        }else{
-            FUN_G.get_id(_type).innerHTML = _option;
-            FUN_G.get_id('area').innerHTML = _option;
         }
     },
 }
