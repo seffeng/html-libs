@@ -15,9 +15,9 @@
         <meta name="twitter:description" content="118456.com,kail.com,1kmi.com,域名出售,domain sale">
         <link rel="icon" href="favicon.png">
         <link rel="stylesheet" href="assets/css/default.css" type="text/css">
-        <link rel="stylesheet" href="assets/plugins/swiper/3.0.0/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/plugins/swiper/2.7.6/css/swiper.css">
         <script src="assets/js/jquery-1.11.2.min.js"></script>
-        <script src="assets/plugins/swiper/3.0.0/js/swiper.min.js"></script>
+        <script src="assets/plugins/swiper/2.7.6/js/swiper.min.js"></script>
         <!--[if lt IE 9]>
             <script src="assets/js/html5shiv.min.js"></script>
             <script src="assets/js/respond.min.js"></script>
@@ -26,35 +26,16 @@
         .swiper-container {
             width: 100%;
             height: 300px;
-            margin: 20px auto;
         }
         .swiper-slide {
             text-align: center;
             font-size: 18px;
             background: #fff;
-            
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
         }
-        table th,table td{padding:5px; border:1px solid #ccc;}
-        table.params-table tbody td:first-child,
-        table.params-table tbody td:nth-child(2),
-        table.params-table tbody td:nth-child(3):not(:last-child){font-size:12px;color:#8c2418;font-family:Monaco,Menlo,Consolas,"Courier New",monospace;}
-        table.params-table tbody td:nth-child(2){color:#006700;}
-        table.params-table tbody th[colspan="4"]{background:#eee;}
-        .article-entry pre{margin: 0 0;}
-        h2,p{color:#242425;}
+        table tbody td:nth-child(2){color:#006700;}
+        table tbody tr:nth-child(odd){background-color: #d9edf7;}
+        table tbody tr:nth-child(even){background-color: #fcf8e3;}
+        table tbody td:first-child,table tbody td:nth-child(3):not(:last-child){font-size:12px;color:#8c2418;font-family:Monaco,Menlo,Consolas,"Courier New",monospace;}
         </style>
     </head>
 
@@ -113,16 +94,25 @@
                                             <div class="swiper-button-prev"></div>
                                         </div>
                                         <script>
+                                            // init
                                             var swiper = new Swiper('.swiper-container', {
                                                                     'autoplay': 3000,
-                                                                    'nextButton': '.swiper-button-next',
-                                                                    'prevButton': '.swiper-button-prev',
                                                                     'pagination': '.swiper-pagination',
                                                                     'paginationClickable': true,
                                                                     'spaceBetween': 30,
                                                                     'loop': true,
                                                                     'autoplayDisableOnInteraction': false,
                                                         });
+                                            // prev
+                                            $('.swiper-button-prev').on('click', function(e){
+                                                e.preventDefault();
+                                                swiper.swipePrev();
+                                            });
+                                            // next
+                                            $('.swiper-button-next').on('click', function(e){
+                                                e.preventDefault();
+                                                swiper.swipeNext();
+                                            });
                                         </script>
                                     </p>
                                     <p></p>
@@ -131,653 +121,1029 @@
                                         <table>
                                             <tr>
                                                 <td class="gutter">
-                                                    <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre>
+                                                    <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre>
                                                 </td>
                                                 <td class="code">
-                                                    <pre><div class="line">&lt;!-- include css --&gt;</div><div class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"assets/plugins/swiper/3.0.0/css/swiper.min.css"</span>&gt;</div><div class="line"></div><div class="line">&lt;!-- include javascript --&gt;</div><div class="line">&lt;script src=<span class="string">"assets/js/jquery-1.11.2.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script src=<span class="string">"assets/plugins/swiper/3.0.0/js/swiper.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;!-- style --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    .swiper-container {</div><div class="line">        width: <span class="number">100</span>%;</div><div class="line">        height: <span class="number">300</span>px;</div><div class="line">        margin: <span class="number">20</span>px auto;</div><div class="line">    }</div><div class="line">    .swiper-slide {</div><div class="line">        text-align: center;</div><div class="line">        font-size: <span class="number">18</span>px;</div><div class="line">        background: <span class="comment">#fff;</span></div><div class="line">        </div><div class="line">        /* Center slide text vertically */</div><div class="line">        display: -webkit-box;</div><div class="line">        display: -ms-flexbox;</div><div class="line">        display: -webkit-flex;</div><div class="line">        display: flex;</div><div class="line">        -webkit-box-pack: center;</div><div class="line">        -ms-flex-pack: center;</div><div class="line">        -webkit-justify-content: center;</div><div class="line">        justify-content: center;</div><div class="line">        -webkit-box-align: center;</div><div class="line">        -ms-flex-align: center;</div><div class="line">        -webkit-align-items: center;</div><div class="line">        align-items: center;</div><div class="line">    }</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=<span class="string">"swiper-container"</span>&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-wrapper"</span>&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#eee"</span>&gt;Slide <span class="number">1</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#fef"</span>&gt;Slide <span class="number">2</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ccc"</span>&gt;Slide <span class="number">3</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ecc"</span>&gt;Slide <span class="number">4</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#cce"</span>&gt;Slide <span class="number">5</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#eff"</span>&gt;Slide <span class="number">6</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#cee"</span>&gt;Slide <span class="number">7</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ef0"</span>&gt;Slide <span class="number">8</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#eae"</span>&gt;Slide <span class="number">9</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ebe"</span>&gt;Slide <span class="number">10</span>&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;!-- bottom --&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-pagination"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;!-- right and left --&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-button-next"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-button-prev"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;!-- javascript --&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var swiper = new Swiper(<span class="string">'.swiper-container'</span>, {</div><div class="line">                            <span class="string">'autoplay'</span>: <span class="number">3000</span>,</div><div class="line">                            <span class="string">'nextButton'</span>: <span class="string">'.swiper-button-next'</span>,</div><div class="line">                            <span class="string">'prevButton'</span>: <span class="string">'.swiper-button-prev'</span>,</div><div class="line">                            <span class="string">'pagination'</span>: <span class="string">'.swiper-pagination'</span>,</div><div class="line">                            <span class="string">'paginationClickable'</span>: <span class="literal">true</span>,</div><div class="line">                            <span class="string">'spaceBetween'</span>: <span class="number">30</span>,</div><div class="line">                            <span class="string">'loop'</span>: <span class="literal">true</span>,</div><div class="line">                            <span class="string">'autoplayDisableOnInteraction'</span>: <span class="literal">false</span>,</div><div class="line">                });</div><div class="line">&lt;/script&gt;</div></pre>
+                                                    <pre><div class="line">&lt;!-- include css --&gt;</div><div class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"assets/plugins/swiper/2.7.6/css/swiper.css"</span>&gt;</div><div class="line"></div><div class="line">&lt;!-- include javascript --&gt;</div><div class="line">&lt;script src=<span class="string">"assets/js/jquery-1.11.2.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script src=<span class="string">"assets/plugins/swiper/2.7.6/js/swiper.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;!-- style --&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    .swiper-container {</div><div class="line">            width: <span class="number">100</span>%;</div><div class="line">            height: <span class="number">300</span>px;</div><div class="line">        }</div><div class="line">    .swiper-slide {</div><div class="line">        text-align: center;</div><div class="line">        font-size: <span class="number">18</span>px;</div><div class="line">        background: <span class="comment">#fff;</span></div><div class="line">    }</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;!-- html --&gt;</div><div class="line">&lt;div class=<span class="string">"swiper-container"</span>&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-wrapper"</span>&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#eee"</span>&gt;Slide <span class="number">1</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#fef"</span>&gt;Slide <span class="number">2</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ccc"</span>&gt;Slide <span class="number">3</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ecc"</span>&gt;Slide <span class="number">4</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#cce"</span>&gt;Slide <span class="number">5</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#eff"</span>&gt;Slide <span class="number">6</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#cee"</span>&gt;Slide <span class="number">7</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ef0"</span>&gt;Slide <span class="number">8</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#eae"</span>&gt;Slide <span class="number">9</span>&lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"swiper-slide"</span> style=<span class="string">"background-color:#ebe"</span>&gt;Slide <span class="number">10</span>&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;!-- bottom --&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-pagination"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;!-- right and left --&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-button-next"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"swiper-button-prev"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;!-- javascript --&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    // init</div><div class="line">    var swiper = new Swiper(<span class="string">'.swiper-container'</span>, {</div><div class="line">                            <span class="string">'autoplay'</span>: <span class="number">3000</span>,</div><div class="line">                            <span class="string">'pagination'</span>: <span class="string">'.swiper-pagination'</span>,</div><div class="line">                            <span class="string">'paginationClickable'</span>: <span class="literal">true</span>,</div><div class="line">                            <span class="string">'spaceBetween'</span>: <span class="number">30</span>,</div><div class="line">                            <span class="string">'loop'</span>: <span class="literal">true</span>,</div><div class="line">                            <span class="string">'autoplayDisableOnInteraction'</span>: <span class="literal">false</span>,</div><div class="line">                });</div><div class="line">    // prev</div><div class="line">    $(<span class="string">'.swiper-button-prev'</span>).on(<span class="string">'click'</span>, function(e){</div><div class="line">        e.preventDefault();</div><div class="line">        swiper.swipePrev();</div><div class="line">    });</div><div class="line">    // next</div><div class="line">    $(<span class="string">'.swiper-button-next'</span>).on(<span class="string">'click'</span>, function(e){</div><div class="line">        e.preventDefault();</div><div class="line">        swiper.swipeNext();</div><div class="line">    });</div><div class="line">&lt;/script&gt;</div></pre>
                                                 </td>
                                             </tr>
                                         </table>
                                     </figure>
-                                    <figure class="highlight" style="background:#fff">
-                                        <h2>Swiper Parameters</h2>
-                                        <p>Let's look on list of all available parameters:</p>
-                                        <table class="params-table">
+                                    <div style="overflow: auto;">
+                                        <table class="table table-bordered table-hover table-condensed">
                                             <thead>
                                                 <tr>
-                                                    <th>Parameter</th>
-                                                    <th>Type</th>
-                                                    <th>Default</th>
-                                                    <th>Description</th>
+                                                    <th>参数</th>
+                                                    <th>类型</th>
+                                                    <th>默认</th>
+                                                    <th>描述</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>initialSlide</td>
-                                                    <td>number</td>
-                                                    <td>0</td>
-                                                    <td>Index number of initial slide.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>direction</td>
-                                                    <td>string</td>
-                                                    <td>'horizontal'</td>
-                                                    <td>Could be 'horizontal' or 'vertical' (for vertical slider).</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>speed</td>
-                                                    <td>number</td>
-                                                    <td>300</td>
-                                                    <td>Duration of transition between slides (in ms)</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Autoplay</th>
-                                                </tr>
+                                                <tr><th colspan="4">Basic（Swiper基础选项）</th></tr>
                                                 <tr>
                                                     <td>autoplay</td>
                                                     <td>number</td>
-                                                    <td>-</td>
-                                                    <td>delay between transitions (in ms). If this parameter is not specified, auto play will be disabled</td>
+                                                    <td>0</td>
+                                                    <td>自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。</td>
                                                 </tr>
                                                 <tr>
                                                     <td>autoplayDisableOnInteraction</td>
                                                     <td>boolean</td>
                                                     <td>true</td>
-                                                    <td>Set to false and autoplay will not be disabled after user interactions (swipes), it will be restarted every time after interaction</td>
+                                                    <td>用户操作swiper之后，是否禁止autoplay。默认为true：停止。如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。操作包括触碰，拖动，点击pagination等。</td>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="4">Progress</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>watchSlidesProgress</td>
+                                                    <td>autoplayStopOnLast</td>
                                                     <td>boolean</td>
                                                     <td>false</td>
-                                                    <td>Enable this feature to calculate each slides progress</td>
+                                                    <td>如果设置为true，当切换到最后一个slide时停止自动切换。（在没有设置loop的情况下）。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>watchVisibility</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td><code>watchSlidesProgress</code> should be enabled. Enable this option and slides that are in viewport will have additional visible class</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Freemode</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>freeMode</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>If <code>true</code> then slides will not have fixed positions</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>freeModeMomentum</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>If <code>true</code>, then slide will keep moving for a while after you release it</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>freeModeMomentumRatio</td>
-                                                    <td>number</td>
-                                                    <td>1</td>
-                                                    <td>Higher value produces larger momentum distance after you release slider</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>freeModeMomentumBounce</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>false</code> if you want to disable momentum bounce in free mode</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>freeModeMomentumBounceRatio</td>
-                                                    <td>number</td>
-                                                    <td>1</td>
-                                                    <td>Higher value produces larger momentum bounce effect</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Effects</th>
-                                                </tr>
-                                                    <tr>
-                                                    <td>effect</td>
-                                                    <td>string</td>
-                                                    <td>'slide'</td>
-                                                    <td>Could be "slide", "fade", "cube" or "coverflow"</td>
-                                                </tr>
-                                                    <tr>
-                                                    <td>cube</td>
-                                                    <td>object</td>
-                                                    <td>
-                                                    <pre><code>cube: {
-  slideShadows: true,
-  shadow: true,
-  shadowOffset: 20,
-  shadowScale: 0.94
-}</code></pre>
-                                                    </td>
-                                                    <td>Cube effect parameters. For better performance you may disable shadows</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>coverflow</td>
-                                                    <td>object</td>
-                                                    <td><pre><code>coverflow: {
-  rotate: 50,
-  stretch: 0,
-  depth: 100,
-  modifier: 1,
-  slideShadows : true
-}</code></pre>
-                                                    </td>
-                                                    <td>Coverflow effect parameters. For better performance you may disable shadows</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Slides grid</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>spaceBetween</td>
-                                                    <td>number</td>
-                                                    <td>0</td>
-                                                    <td>Distance between slides in px.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>slidesPerView</td>
-                                                    <td>number or 'auto'</td>
-                                                    <td>1</td>
-                                                    <td>Number of slides per view (slides visible at the same time on slider's container).</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>slidesPerColumn</td>
-                                                    <td>number</td>
-                                                    <td>1</td>
-                                                    <td>Number of slides per column, for multirow layout</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>slidesPerColumnFill</td>
-                                                    <td>string</td>
-                                                    <td>'column'</td>
-                                                    <td>Could be 'column' or 'row'. Defines how slides should fill rows, by column or by row</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>slidesPerGroup</td>
-                                                    <td>number</td>
-                                                    <td>1</td>
-                                                    <td>Set numbers of slides to define and enable group sliding. Useful to use with slidesPerView &gt; 1</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>centeredSlides</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>If true, then active slide will be centered, not always on the left side.</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Grab Cursor</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>grabCursor</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>This option may a little improve desktop usability. If <code>true</code>, user will see the "grab" cursor when hover on Swiper</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Touches</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>touchRatio</td>
-                                                    <td>number</td>
-                                                    <td>1</td>
-                                                    <td>Touch ration</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>touchAngle</td>
-                                                    <td>number</td>
-                                                    <td>45</td>
-                                                    <td>Allowable angle (in degrees) to trigger touch move</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>simulateTouch</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>If true, Swiper will accept mouse events like touch events (click and drag to change slides)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>shortSwipes</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>false</code> if you want to disable short swipes</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>longSwipes</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>false</code> if you want to disable long swipes</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>longSwipesRatio</td>
-                                                    <td>number</td>
-                                                    <td>0.5</td>
-                                                    <td>Ratio to trigger swipe to next/previous slide during long swipes</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>longSwipesMs</td>
+                                                    <td>speed</td>
                                                     <td>number</td>
                                                     <td>300</td>
-                                                    <td>Minimal duration (in ms) to trigger swipe to next/previous slide during long swipes</td>
+                                                    <td>滑动速度，即slider自动滑动开始到结束的时间（单位ms）。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>followFinger</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>If disabled, then slider will be animated only when you release it, it will not move while you hold your finger on it</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>onlyExternal</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>If true, then the only way to switch the slide is use of external API functions like slidePrev or slideNext</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>threshold</td>
-                                                    <td>number</td>
-                                                    <td>0</td>
-                                                    <td>Threshold value in px. If "touch distance" will be lower than this value then swiper will not move</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>touchMoveStopPropagation</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>If enabled, then propagation of "touchmove" will be stopped</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Touch Resistance</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>resistance</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>false</code> if you want to disable resistant bounds</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>resistanceRatio</td>
-                                                    <td>number</td>
-                                                    <td>0.85</td>
-                                                    <td>This option allows you to control resistance ratio</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Clicks</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>preventClicks</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>true</code> to prevent accidental unwanted clicks on links during swiping</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>preventClicksPropagation</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>true</code> to stop clicks event propagation on links during swiping</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>releaseFormElements</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>true</code> to prevent swiping on form elements</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>slideToClickedSlide</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>Set to <code>true</code> and click on any slide will produce transition to this slide</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Swiping / No swiping</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>allowSwipeToPrev</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>false</code> to disable swiping to previous slide direction (to left or top)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>allowSwipeToNext</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>false</code> to disable swiping to next slide direction (to right or bottom)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>noSwiping</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>false</code> to disable swiping to next slide direction (to right or bottom)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>noSwipingClass</td>
+                                                    <td>eventTarget</td>
                                                     <td>string</td>
-                                                    <td>'swiper-no-swiping'</td>
-                                                    <td>If <code>true</code>, then you can add <code>noSwipingClass</code> class to swiper's slide to prevent/disable swiping on this element</td>
+                                                    <td>wrapper</td>
+                                                    <td>默认状态下所有的触控事件只能用于wrapper。设定为 'container' 则其他包含在container内的元素也可触控。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>swipeHandler</td>
-                                                    <td>string / HTMLElement</td>
-                                                    <td>null</td>
-                                                    <td>String with CSS selector or HTML element of the container with pagination that will work as only available handler for swiping</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Pagination</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>pagination</td>
-                                                    <td>string / HTMLElement</td>
-                                                    <td>null</td>
-                                                    <td>String with CSS selector or HTML element of the container with pagination</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>paginationHide</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Toggle (hide/true) pagination container visibility when click on Slider's container</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>paginationClickable</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>If <code>true</code> then clicking on pagination button will cause transition to appropriate slide</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Navigation Buttons</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>nextButton</td>
-                                                    <td>string / HTMLElement</td>
-                                                    <td>null</td>
-                                                    <td>String with CSS selector or HTML element of the element that will work like "next" button after click on it</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>prevButton</td>
-                                                    <td>string / HTMLElement</td>
-                                                    <td>null</td>
-                                                    <td>String with CSS selector or HTML element of the element that will work like "prev" button after click on it</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Scollbar</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>scrollbar</td>
-                                                    <td>string / HTMLElement</td>
-                                                    <td>null</td>
-                                                    <td>String with CSS selector or HTML element of the container with scrollbar.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>scrollbarHide</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Hide scrollbar automatically after user interaction</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Keyboard / Mousewheel</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>keyboardControl</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>Set to <code>true</code> to enable navigation through slides using keyboard right and left (for horizontal mode), top and borrom (for vertical mode) keyboard arrows</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>mousewheelControl</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>Set to <code>true</code> to enable navigation through slides using mouse wheel</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>mousewheelForceToAxis</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>Set to <code>true</code> to force mousewheel swipes to axis. So in horizontal mode mousewheel will work only with horizontal mousewheel scrolling, and only with vertical scrolling in vertical mode.</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Hash Navigation</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>hashnav</td>
-                                                    <td>boolean</td>
-                                                    <td>false</td>
-                                                    <td>Set to <code>true</code> to enable hash url navigation to for slides</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Images</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>updateOnImagesReady</td>
-                                                    <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>When enabled Swiper will be reinitialized after all inner images (&lt;img&gt; tags) are loaded</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="4">Loop</th>
+                                                    <td>mode</td>
+                                                    <td>string</td>
+                                                    <td>horizontal</td>
+                                                    <td>滑动方向，可设置水平(horizontal)或垂直(vertical)。</td>
                                                 </tr>
                                                 <tr>
                                                     <td>loop</td>
                                                     <td>boolean</td>
-                                                    <td>true</td>
-                                                    <td>Set to <code>true</code> to enable continuous loop mode</td>
+                                                    <td>false</td>
+                                                    <td>设置为true 则开启loop模式。loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换。</td>
                                                 </tr>
                                                 <tr>
                                                     <td>loopAdditionalSlides</td>
                                                     <td>number</td>
                                                     <td>0</td>
-                                                    <td>Addition number of slides that will be cloned after creating of loop</td>
+                                                    <td>loop模式下会在slides前后复制若干个slide,，前后复制的个数不会大于原总个数。默认为0，前后各复制1个。0,1,2 --> 2,0,1,2,0；例：取值为1，0,1,2 --> 1,2,0,1,2,0,1例：取值为2或以上，0,1,2 --> 0,1,2,0,1,2,0,1,2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>slidesPerView</td>
+                                                    <td>number or auto</td>
+                                                    <td>1</td>
+                                                    <td>设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。'auto'不兼容loop模式，除非你设置了loopedSlides。</td>
                                                 </tr>
                                                 <tr>
                                                     <td>loopedSlides</td>
                                                     <td>number</td>
-                                                    <td>null</td>
-                                                    <td>If you use <code>slidesPerView:'auto'</code> with loop mode you should tell to Swiper how many slides it should "loop" (duplicate) using this parameter</td>
+                                                    <td>1</td>
+                                                    <td>在loop模式下使用slidesPerview:'auto',还需使用该参数设置所要用到的loop个数。</td>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="4">Controller</th>
+                                                    <td>slidesPerViewFit</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>只有当设置了slidesPerView为 'auto' 并且你有宽度大于container的slide时，该参数才有效。默认为true，slide会贴合container的边界滑动。设为false时，slide会按container的大小切开划分为多个slides。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>control</td>
-                                                    <td>[Swiper Instance]</td>
-                                                    <td>undefined</td>
-                                                    <td>Pass here another Swiper instance or array with Swiper instances that should be controlled by this Swiper</td>
+                                                    <td>slidesPerGroup</td>
+                                                    <td>number</td>
+                                                    <td>1</td>
+                                                    <td>在carousel mode下定义slides的数量多少为一组。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>controlInverse</td>
+                                                    <td>calculateHeight</td>
                                                     <td>boolean</td>
                                                     <td>false</td>
-                                                    <td>Set to <code>true</code> and controlling will be in inverse direction</td>
+                                                    <td>当值为true时，Swiper根据slides内容计算容器高度。</td>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="4">Touches</th>
+                                                    <td>roundLengths</td>
+                                                    <td>boolean</td>
+                                                    <td>boolean</td>
+                                                    <td>值为true时，Swiper会四舍五入宽度和高度。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>observer</td>
+                                                    <td>cssWidthAndHeight</td>
+                                                    <td>boolean/string</td>
+                                                    <td>false</td>
+                                                    <td>值为true时Swiper中的container，wrapper和slides不会自动生成宽度和高度，需要你手动设定。还可以通过设定'width'或'height'来单独取消生成宽度或高度。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>updateOnImagesReady</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>当所有的内嵌图像（img标签）加载完成后Swiper会重新初始化。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>releaseFormElements</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>默认值为true，允许在Swiper中使用表单元素并且无法拖动这些表单元素。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>watchActiveIndex</td>
                                                     <td>boolean</td>
                                                     <td>false</td>
-                                                    <td></td>
+                                                    <td>监控活动块的索引。设置为true时，拖动slide会即时更新活动块的索引值。默认值: false ，重新初始化时更新。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>observeParents</td>
+                                                    <td>visibilityFullFit</td>
                                                     <td>boolean</td>
                                                     <td>false</td>
-                                                    <td></td>
+                                                    <td>如果启用，仅有“可视”的slides会最后适应容器的大小</td>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="4">Callbacks</th>
+                                                    <td>autoResize</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>设置为false后，取消自适应。当窗口尺寸改变时，slide宽度不会改变。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onSlideChangeStart(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed in the beginning of animation to other slide (next or previous). Receives swiper instance as an argument.</td>
+                                                    <td>resizeReInit</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>设置为true则windows改变尺寸时swiper会重新初始化。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onSlideChangeEnd(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed after animation to other slide (next or previous). Receives slider instance as an argument.</td>
+                                                    <td>DOMAnimation</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>在不支持css transitions(IE7-9)的浏览器上是否使用自定义的DOM动画。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onTransitionStart(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed in the beginning of transition. Receives swiper instance as an argument.</td>
+                                                    <td>resistance</td>
+                                                    <td>boolean or 100%</td>
+                                                    <td>true</td>
+                                                    <td>值为false时禁用resistant bounds（抵抗反弹）,设置为‘100%'时启用resistant（抵抗）模式。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onTransitionEnd(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed after transition. Receives slider instance as an argument.</td>
+                                                    <td>noSwiping</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>设为true时，可以在slide上增加类名'swiper-no-swiping'，使该slide无法滑动。该类名可通过noSwipingClass修改。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onTouchStart(swiper, event)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when user touch Swiper. Receives swiper instance and 'touchstart' event as an arguments.</td>
+                                                    <td>preventLinks</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>默认为true，当slide正在被touch时swiper阻止点击链接。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onTouchMove(swiper, event)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when user touch and move finger over Swiper. Receives swiper instance and 'touchmove' event as an arguments.</td>
+                                                    <td>preventLinksPropagation</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>-</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onSliderMove(swiper, event)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when user touch and move finger over Swiper and move it. Receives swiper instance and 'touchmove' event as an arguments.</td>
+                                                    <td>initialSlide</td>
+                                                    <td>number</td>
+                                                    <td>0</td>
+                                                    <td>设定初始化时slide的索引。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onTouchEnd(swiper, event)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when user release Swiper. Receives swiper instance and 'touchend' event as an arguments.</td>
+                                                    <td>useCSS3Transforms</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>如果你不想使用css3 transforms来设定slide的位移而是使用wrapper的left/top属性则可以将此参数设置为false。这会使得Swiper减少内存消耗，提高性能，但会降低美观程度。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Free Mode （free模式/抵抗反弹）</th></tr>
+                                                <tr>
+                                                    <td>freeMode</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>若为true则是自由模式，不会自动贴合滑动位置。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onClick(swiper, event)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when user click/tap on Swiper after 300ms delay. Receives swiper instance and 'touchend' event as an arguments.</td>
+                                                    <td>freeModeFluid</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>若为true，释放滑块之后仍会滑动一点。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onTap(swiper, event)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when user click/tap on Swiper. Receives swiper instance and 'touchend' event as an arguments.</td>
+                                                    <td>scrollContainer</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>设置为真时，把整个Swiper作为可滚动区域，在制作滚动条时使用，借助 swiper.scrollbar.css 和 swiper.scrollbar-2.1.js</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onDoubleTap(swiper, event)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when user double tap on Swiper's container. Receives swiper instance and 'touchend' event as an arguments</td>
+                                                    <td>momentumRatio</td>
+                                                    <td>number</td>
+                                                    <td>1</td>
+                                                    <td>设置的值越大，当释放slide时的滑动距离越大。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onImagesReady(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed right after all inner images are loaded. <code>updateOnImagesReady</code> should be also enabled</td>
+                                                    <td>momentumBounce</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>false时禁用free模式下的动量弹性，slide惯性滑动到边缘时，无法反弹。注意与resistance（手动抵抗）区分。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onReachBeginning(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when Swiper reach its beginning (initial position)</td>
+                                                    <td>momentumBounceRatio</td>
+                                                    <td>number</td>
+                                                    <td>1</td>
+                                                    <td>值越大产生的边界反弹效果越明显。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Slides offset (slides位移选项)</th></tr>
+                                                <tr>
+                                                    <td>centeredSlides</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>默认状态下活动块居左，设定为true时，活动块会居中。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onReachEnd(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when Swiper reach last slide</td>
+                                                    <td>offsetPxBefore</td>
+                                                    <td>number</td>
+                                                    <td>0</td>
+                                                    <td>设定slides与wrapper左边框的偏移量（单位px）。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onDestroy(swiper)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when you destroy Swiper</td>
+                                                    <td>offsetPxAfter</td>
+                                                    <td>number</td>
+                                                    <td>0</td>
+                                                    <td>设定slides与wrapper右边框的偏移量（单位px）。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onSetTranslate(swiper, translate)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed when swiper's wrapper change its position. Receives swiper instance and current translate value as an arguments</td>
+                                                    <td>offsetSlidesBefore</td>
+                                                    <td>number</td>
+                                                    <td>0</td>
+                                                    <td>设定slides与wrapper左边框的偏移个数。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>onSetTransition(swiper, transition)</td>
-                                                    <td>function</td>
-                                                    <td></td>
-                                                    <td>Callback function, will be executed everytime when swiper starts animation. Receives swiper instance and current transition duration (in ms) as an arguments</td>
+                                                    <td>offsetSlidesAfter</td>
+                                                    <td>number</td>
+                                                    <td>0</td>
+                                                    <td>设定slides与wrapper右边框的偏移个数。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Touch/mouse interactions (触发Swiper选项)</th></tr>
+                                                <tr>
+                                                    <td>touchRatio</td>
+                                                    <td>number</td>
+                                                    <td>1</td>
+                                                    <td>触屏与slide滑动的比率。</td>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="4">Namespace</th>
+                                                    <td>simulateTouch</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>默认为true，Swiper接受鼠标点击、拖动。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onlyExternal</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>值为true时，只能使用扩展API函数的swipeNext() 或swipePrev()或swipeTo()改变slides滑动，其他失效，一般用于制作tab菜单。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>followFinger</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>如设置为false，拖动slide时它不会动，当你释放时slide才会切换。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>grabCursor</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>设置为true时，鼠标覆盖Swiper时指针会变成抓手形状。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>shortSwipes</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>设置为false时，进行快速短距离的拖动无法触发Swiper。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>longSwipesRatio</td>
+                                                    <td>number</td>
+                                                    <td>0.5</td>
+                                                    <td>触发swiper所需要的最小拖动距离比例。值越大触发Swiper所需距离越大。最大值0.5。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>moveStartThreshold</td>
+                                                    <td>number</td>
+                                                    <td>false</td>
+                                                    <td>拖动的临界值（单位为px），如果触摸距离小于该值滑块不会被拖动。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>swipeToNext</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>设置为false可禁止向右或下滑动。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>swipeToPrev</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>设为false可禁止向左或上滑动。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Navigation (鼠标、键盘控制选项)</th></tr>
+                                                <tr>
+                                                    <td>keyboardControl</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>是否开启键盘控制Swiper切换。设置为true时，能使用键盘方向键控制slide滑动。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>mousewheelControl</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>是否开启鼠标控制Swiper切换。设置为true时，能使用鼠标滑轮控制slide滑动。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>mousewheelControlForceToAxis</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>当值为true让鼠标滑轮固定于轴向。当水平mode时的鼠标滑轮只有水平滚动才会起效，当垂直mode时的鼠标滑轮只有垂直滚动才会起效。普通家用鼠标只有垂直方向的滚动。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Pagination（分页器选项）</th></tr>
+                                                <tr>
+                                                    <td>pagination</td>
+                                                    <td>string or HTML Element</td>
+                                                    <td>-</td>
+                                                    <td>定义一个Swiper的分页器。默认会在这个分页器里面生成与slide对应的span标签。要求类型是css选择器或者HTML标签，如：.pagination 。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>paginationClickable</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>值为true时，点击分页器的指示点时会发生Swiper。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>paginationAsRange</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>默认true，会在可视的slide对应的pagination按钮上增加一个 swiper-visible-switch 类名，当你的pagination用于指示carousel模式的Swiper时很有用。默认类名可通过paginationVisibleClass修改。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>createPagination</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>生成pagination。默认为true，Swiper会在pagination生成与slides数量相同的span元素。每一个span都有一个"swiper-pagination-switch"类名，活动的slide对应的span还有一个"swiper-active-switch"的类名，可视的slide对应的span还有一个"swiper-visible-switch"的类名。设置为false，则不生成这些span。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Namespace（命名空间）</th></tr>
+                                                <tr>
+                                                    <td>wrapperClass</td>
+                                                    <td>string</td>
+                                                    <td>swiper-wrapper</td>
+                                                    <td>设置wrapper的css类名。</td>
                                                 </tr>
                                                 <tr>
                                                     <td>slideClass</td>
                                                     <td>string</td>
-                                                    <td>'swiper-slide'</td>
-                                                    <td>CSS class name of slide</td>
+                                                    <td>swiper-slide</td>
+                                                    <td>设置slide的类名。</td>
                                                 </tr>
                                                 <tr>
                                                     <td>slideActiveClass</td>
                                                     <td>string</td>
-                                                    <td>'swiper-slide-active'</td>
-                                                    <td>CSS class name of currently active slide</td>
+                                                    <td>swiper-slide-active</td>
+                                                    <td>设置活动块的类名。</td>
                                                 </tr>
                                                 <tr>
                                                     <td>slideVisibleClass</td>
                                                     <td>string</td>
-                                                    <td>'swiper-slide-visible'</td>
-                                                    <td>CSS class name of currently visible slide</td>
+                                                    <td>swiper-slide-visible</td>
+                                                    <td>设置可视块的类名。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>slideDuplicateClass</td>
+                                                    <td>slideElement</td>
                                                     <td>string</td>
-                                                    <td>'swiper-slide-duplicate'</td>
-                                                    <td>CSS class name of slide duplicated by loop mode</td>
+                                                    <td>div</td>
+                                                    <td>设置slide的html标签。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>slideNextClass</td>
+                                                    <td>noSwipingClass</td>
                                                     <td>string</td>
-                                                    <td>'swiper-slide-next'</td>
-                                                    <td>CSS class name of slide which is right after currently active slide</td>
+                                                    <td>swiper-no-swiping</td>
+                                                    <td>不可拖动块的类名，当noSwiping设置为true时，并且在slide加上此类名，slide无法拖动。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>slidePrevClass</td>
+                                                    <td>paginationElement</td>
                                                     <td>string</td>
-                                                    <td>'swiper-slide-prev'</td>
-                                                    <td>CSS class name of slide which is right before currently active slide</td>
+                                                    <td>span</td>
+                                                    <td>pagination分页器内元素的html标签。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>wrapperClass</td>
+                                                    <td>paginationElementClass</td>
                                                     <td>string</td>
-                                                    <td>'swiper-wrapper'</td>
-                                                    <td>CSS class name of slides' wrapper</td>
+                                                    <td>swiper-pagination-switch</td>
+                                                    <td>pagination分页器内元素的类名。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>bulletClass</td>
+                                                    <td>paginationActiveClass</td>
                                                     <td>string</td>
-                                                    <td>'swiper-pagination-bullet'</td>
-                                                    <td>CSS class name of single pagination bullet</td>
+                                                    <td>swiper-active-switch</td>
+                                                    <td>pagination分页器内活动(active)元素的类名。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>bulletActiveClass</td>
+                                                    <td>paginationVisibleClass</td>
                                                     <td>string</td>
-                                                    <td>'swiper-pagination-bullet-active'</td>
-                                                    <td>CSS class name of currently active pagination bullet</td>
+                                                    <td>swiper-visible-switch</td>
+                                                    <td>pagination分页器内与可见slide对应的按钮的类名。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Swiper 3D flow插件参数</th></tr>
+                                                <tr>
+                                                    <td>rotate</td>
+                                                    <td>number</td>
+                                                    <td>50</td>
+                                                    <td>slide做3d旋转时Y轴的旋转角度。该参数为Swiper 3D flow插件参数，使用前需先加载插件。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>paginationHiddenClass</td>
-                                                    <td>string</td>
-                                                    <td>'swiper-pagination-hidden'</td>
-                                                    <td>CSS class name of pagination when it becomes inactive</td>
+                                                    <td>stretch</td>
+                                                    <td>number</td>
+                                                    <td>0</td>
+                                                    <td>每个slide之间的拉伸值，越大slide靠得越紧。该参数为Swiper 3D flow插件参数，使用前需先加载插件。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>buttonDisabledClass</td>
+                                                    <td>depth</td>
+                                                    <td>number</td>
+                                                    <td>100</td>
+                                                    <td>slide的位置深度。值越大z轴距离越远，看起来越小。该参数为Swiper 3D flow插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>modifier</td>
+                                                    <td>number</td>
+                                                    <td>1</td>
+                                                    <td>depth和rotate和stretch的倍率，相当于depth*modifier、rotate*modifier、stretch*modifier，值越大这三个参数的效果越明显。该参数为Swiper 3D flow插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>shadows</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>产生了3d旋转的slide是否使用阴影。该参数为Swiper 3D flow插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Swiper Scrollbar插件参数</th></tr>
+                                                <tr>
+                                                    <td>container</td>
                                                     <td>string</td>
-                                                    <td>'swiper-button-disabled'</td>
-                                                    <td>CSS class name of next/prev button when it becomes disabled</td>
+                                                    <td>-</td>
+                                                    <td>Scrollbar插件的滚动条容器；举例：.swiper-scrollbar。该参数为Swiper Scrollbar插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>draggable</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>设定滚动条是否可拖动。默认可拖动。该参数为Swiper Scrollbar插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>hide</td>
+                                                    <td>boolean</td>
+                                                    <td>true</td>
+                                                    <td>滚动条是否自动隐藏。该参数为Swiper Scrollbar插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>snapOnRelease</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>如果设置为true，释放拖动块时slide自动贴合，即使在free模式下。该参数为Swiper Scrollbar插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>dragSize</td>
+                                                    <td>number</td>
+                                                    <td>-</td>
+                                                    <td>设置拖动块的长度，单位为px(2.41版本新增)。该参数为Swiper Scrollbar插件参数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onScrollbarDrag</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，在拖动滚动条的过程中执行。该函数为Swiper Scrollbar插件函数，使用前需先加载插件。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Callbacks（回调函数）</th></tr>
+                                                <tr>
+                                                    <td>addCallback</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>添加一个回调函数。是on系列回调函数的另一种写法。要把on去掉。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>fireCallback</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>去除某个swiper的callback 函数语句。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>removeCallbacks</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>批量去除回调函数。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>queueStartCallbacks</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>设置为true时，slideChangeStart回调函数入队，所以在快速滑动过程中回调函数只被调用一次。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>queueEndCallbacks</td>
+                                                    <td>boolean</td>
+                                                    <td>false</td>
+                                                    <td>设置为true时，slideChangeEnd 回调函数入队，所以在快速滑动结束后回调函数只被调用一次。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onFirstInit</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，首次初始化后执行。<br />
+                                                    <code>var mySwiper = new Swiper('.swiper-container',
+                                                    {onFirstInit: function(swiper){}})</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onInit</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，非首次初始化后执行。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSwiperCreated</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，当Swiper初始化完成，loop，pagination，等其他参数或方法生成之后执行。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onTouchStart</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>当碰触到slider时执行。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onTouchMove</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>在触碰slide到释放期间执行。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onTouchEnd</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>当释放slider时执行。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSlideReset</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，释放滑块之后，滑块达不到swiper触发距离向后滑回时执行。free模式下不生效。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSlideChangeStart</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>滑块释放时如果触发slider切换则执行。free模式下无效。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSlideChangeEnd</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>slider切换结束时执行。free模式下无效。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSlideNext</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，与onSlideChangeStart相似，但该函数只能在滑向下一slide开始时生效。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSlidePrev</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，与onSlideChangeStart相似，但该函数只能在滑向上一slide开始时生效。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSlideClick</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>点击slide时执行。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSlideTouch</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，当触碰事件发生后生效。与onTouchStart相似，不过该函数会返回.clickedSlide和.clickedSlideIndex的值。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onImagesReady</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，所有内置图像加载完成后执行，同时 updateOmImagesReady 需设置为 true 。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onMomentumBounce</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>在惯性滑动反弹时执行，常用于滑动刷新。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onResistanceBefore</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>抵抗反弹发生在wrapper之前时触发，就是左或上抵抗了。返回抵抗距离，常用于下拉刷新。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onResistanceAfter</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>抵抗反弹发生在wrapper之后时触发，就是右或下抵抗了。返回抵抗距离，常用于上拉刷新。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSetWrapperTransition</td>
+                                                    <td>function</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，每次当Swiper开始动画时执行，举例： function(swiper,duration){ //执行代码 }；常用于Swiper Smooth Progress插件。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>onSetWrapperTransform</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>回调函数，swiper的容器wrapper改变其坐标时执行。返回带当前transform 的偏移量的对象。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Function（Swiper函数）</th></tr>
+                                                <tr>
+                                                    <td>disableMousewheelControl()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>禁止鼠标滑轮控制。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>enableMousewheelControl()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>开启被disableMousewheelControl()禁止了的鼠标滑轮控制。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>enableKeyboardControl()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>开启键盘控制。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>disableKeyboardControl()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>禁止键盘控制。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>swipeNext()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>滑动到下一个滑块。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>swipePrev()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>滑动到前一个滑块。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>swipeTo(index,speed,runCallbacks)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>滑动到到指定滑块。index:必选，num，指定将要切换到的slide的索引，第一个为0；speed:可选，num(单位ms)，切换速度；runCallbacks:可选，boolean，设置为false时不会触发onSlideChange回调函数。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>activeSlide()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>获取当前的活动块。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>startAutoplay()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>开始自动切换。一般用来做 Play 按钮。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>stopAutoplay()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>停止自动切换。一般用来制作 pause 按钮。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>destroy(removeResizeEvent)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>移除所有绑定的监听事件，释放浏览器内存。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>resizeFix()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>当你改变swiper 的尺寸而没有改变窗口大小时调用这个方法。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>reInit()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>重新初始化Swiper。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getWrapperTranslate(axis)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回当前wrapper位移，即x或y轴的偏移量。axis：可选值”x“或”y“，对应于水平方向或垂直方向</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>setWrapperTranslate(x,y,z)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>手动设置wrapper的位移。x：水平方向，num。y：垂直方向，num。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>wrapperTransitionEnd()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>当wrapper的transition事件触发后能够自定义回调函数（在swipeNext,swipePrev,swipeTo 以及swipeReset 函数之后）。callback：必选，function。自定义的回调函数，默认状态下只执行一次。permanent ：可选boolean 。默认为false，当设置为true时自定义的回调函数会执行多次。</td>
+                                                </tr>
+                                                <tr><th colspan="4">Method（Swiper方法）</th></tr>
+                                                <tr>
+                                                    <td>browser.ie10</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>如果浏览器为IE10返回true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>browser.ie8</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>如果浏览器为IE8返回true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>support.touch</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>如果浏览器支持触屏返回 true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>support.transforms</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>如果浏览器支持css3 transforms(变形)返回 true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>support.transforms3d</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>如果浏览器支持css3 3D transforms(变形)返回 true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>support.transitions</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>如果浏览器支持css3 transitions(过渡)返回 true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>clickedSlideIndex</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回触控/点击块（slide）的索引（数字）。只适用于 onSlideTouch 和 onSlideClick 回调函数中。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>clickedSlide</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回触控/点击块的slide实例(html元素)。只适于 onSlideTouch 和 onSlideClick 回调函数中。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>activeIndex</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回当前活动块的索引。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>activeLoopIndex</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>在loop模式下返回当前活动块的索引。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>activeLoaderIndex</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>在loader模式下返回当前活动块的索引。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>previousIndex</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回上一个活动块的索引。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>width</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>获取swiper容器的宽度。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>height</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>获取swiper容器的高度。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>isTouched</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>当触控slide时返回 true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>positions</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回包含坐标的wrapper对象。start：滑动前的坐标。abs：触摸距离。diff：带方向的触摸距离。类似于getWrapperTranslate()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>touches</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回包含触控信息的对象数组。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>params</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>获取对象初始化参数，或者重写该参数，如： mySwiper.params.speed = 500。</td>
+                                                </tr>
+                                                <tr><th colspan="4">增加、删除Slide</th></tr>
+                                                <tr>
+                                                    <td>createSlide(html,slideClassList,element)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>生成Swiper滑块。html：必选，string。生成的滑块的HTML元素的内容。slideClassList：可选，stirng。创建类”class“属性。默认为"swiper-slide "。element：可选，string。创建滑块的HTML标签，默认为"div"。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>slides</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>slides数组（slides对象）。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>appendSlide(HTML,slideClassList,element)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>创建新滑块并插入到slider最后面。返回slide实例。其中：html：必选，string。生成的滑块的HTML元素的内容。slideClassList：可选，string。创建类”class“属性。默认为"swiper-slide "。element：可选，string。创建滑块的HTML标签，默认为"div"。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>appendSlide(slideInstance)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>插入到slider末尾。返回slide实例。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>prependSlide(HTML,slideClassList,element)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>新创建slide并插入到slider首位置。返回slide实例。其中：html：必选，string。生成的滑块的HTML元素的内容。slideClassList：可选，string。创建类”class“属性。默认为"swiper-slide "。element：可选，string。创建滑块的HTML标签，默认为"div"。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>prependSlide(slideInstance)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>将slideInstance插入到slider首位置。返回slide实例。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>insertSlideAfter(index,HTML,slideClassList,element)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>新创建slide并插入到slider指定的索引位置index。返回slide实例。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>insertSlideAfter(index,slideInstance)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>将slideInstance插入到slider指定的索引位置index。返回slide实例。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>removeSlide(index)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>移除索引为index的slide</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>removeLastSlide()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>移除最后一个slide。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>removeAllSlides()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>移除所有slides</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getSlide(index)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回index索引的slide</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getLastSlide()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回最后一个slide</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getFirstSlide()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回第一个slide</td>
+                                                </tr>
+                                                <tr><th colspan="4">控制slide</th></tr>
+                                                <tr>
+                                                    <td>append()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>添加slide到slides的最后一个位置，返回slide实例。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>prepend()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>添加slide到slides的第一个位置，返回slide实例。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>remove()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>移除指定的slide。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getWidth()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>获取slide宽度。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getHeight()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>获取slide高度。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getOffset()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>获取包含滑块left、top偏移量的对象。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>insertAfter(index)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>插入新滑块到index索引之后，返回slide实例。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>clone()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>复制slide到新slide实例，返回新复制的slide实例。</td>
+                                                </tr>
+                                                <tr><th colspan="4">设置slide</th></tr>
+                                                <tr>
+                                                    <td>html(innerHTML)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>类似于jQuery的html()方法。如果指定innerHTML，那么它会替代原来slide里的内容，然后返回slide实例。 如果innerHTML没有指定，返回slide中html内容。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>index()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回某个slide的索引，从0开始。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>isActive()</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>如果该块处于active状态返回true。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>setData(name,value)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>存储数据方法，能够存储所有类型变量-数组，对象，数字，字符等等；name : 必选，stringvalue : 必选，array, object, number等。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>getData(name)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回存储的变量值；name : 必选，string</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>data(name,value)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>保存变量值到data属性中，存储数据方法，能够存储string类型变量。name: 必选，string；value:必选，string</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>data(name)</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>返回data-[name]属性值；name : 必选，string。</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </figure>
+                                    </div>
                                     <p></p>
                                 </div>
                             </div>
